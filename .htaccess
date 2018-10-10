@@ -1,0 +1,20 @@
+
+# HTID:3478985: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+<IfModule mod_expires.c>
+    ExpiresActive on
+ 
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg "access plus 1 month"
+</IfModule>
+
+
+
+RewriteCond %{HTTP_HOST} ^www\.artemzinhocv\.000webhostapp\.com$
+RewriteRule ^/?$ "http\:\/\/artemzinhocv\.000webhostapp\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} !^www.artemzinhocv.000webhostapp.com$ [NC]
+RewriteRule ^(.*)$ http://www.artemzinhocv.000webhostapp.com/$1 [L,R=301]
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:3478985:
